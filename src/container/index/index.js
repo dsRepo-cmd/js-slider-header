@@ -41,11 +41,11 @@ class Slider {
       }
     }
 
-    if (
-      side === 'right' ||
-      scrollLeft === scrollWidth - offsetWidth
-    ) {
-      if (this.#count === this.#max) {
+    if (side === 'right') {
+      if (
+        this.#count === this.#max ||
+        scrollLeft === scrollWidth - offsetWidth
+      ) {
         this.#count = 1
         scroll = 0
       } else {
